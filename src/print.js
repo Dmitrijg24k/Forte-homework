@@ -1,3 +1,3 @@
 export default function printMe() {
-    console.log('print something...');
+    console.log('Updating print.js...');
   }

@@ -6,7 +6,7 @@ import printMe from './print.js';
 function test() {
     const element = document.createElement('div');
 
-    element.innerHTML = join(['Hello', 'webpack'], ' ');
+    element.innerHTML = join(['Hello', 'webpack!'], ' ');
 
     element.classList.add('hello');
 
@@ -25,3 +25,10 @@ function test() {
 }
   
 document.body.appendChild(test());
+
+if (module.hot) {
+    module.hot.accept('./print.js', function() {
+      console.log('Accepting the updated printMe module!');
+      printMe();
+    })
+}
