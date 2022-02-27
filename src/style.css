@@ -5,3 +5,9 @@ img{
     width: 100px;
     height: 100px;
 }
+button {
+    width: 70px;
+    height: 30px;
+    margin: 0px 10px;
+    background-color: beige;
+}
